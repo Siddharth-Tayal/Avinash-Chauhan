@@ -1,16 +1,8 @@
 import React from "react";
-// https://www.youtube.com/watch?v=RJQfo2rRhhk
-
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardContent from "@mui/material/CardContent";
-import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 function DemoVideos() {
-  const { innerWidth } = window;
   return (
     <Container
       id="testimonials"
@@ -43,32 +35,32 @@ function DemoVideos() {
             width={"350"}
             height="465"
             src="https://www.youtube.com/embed/RJQfo2rRhhk?si=hF82gunvXTa-Ot4i?controls=1"
-            referrerpolicy="strict-origin-when-cross-origin"
+            referrerPolicy="strict-origin-when-cross-origin"
           ></iframe>
           <div className="  md:flex hidden flex-col items-center justify-center gap-[15px]">
             <iframe
               width={"350"}
               height="225"
               src="https://www.youtube.com/embed/RJQfo2rRhhk?si=hF82gunvXTa-Ot4i?controls=1"
-              referrerpolicy="strict-origin-when-cross-origin"
+              referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
             <iframe
               width={"350"}
               height="225"
               src="https://www.youtube.com/embed/RJQfo2rRhhk?si=hF82gunvXTa-Ot4i?controls=1"
-              referrerpolicy="strict-origin-when-cross-origin"
+              referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
           </div>{" "}
           <div className=" flex flex-wrap  md:hidden items-center justify-center gap-[15px]">
             <iframe
               //   height="225"
               src="https://www.youtube.com/embed/RJQfo2rRhhk?si=hF82gunvXTa-Ot4i?controls=1"
-              referrerpolicy="strict-origin-when-cross-origin"
+              referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
             <iframe
               //   height="225"
               src="https://www.youtube.com/embed/RJQfo2rRhhk?si=hF82gunvXTa-Ot4i?controls=1"
-              referrerpolicy="strict-origin-when-cross-origin"
+              referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
           </div>
         </div>

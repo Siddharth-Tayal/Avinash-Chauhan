@@ -11,18 +11,18 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import ToggleColorMode from "./ToggleColorMode";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function AppAppBar({ mode, toggleColorMode, setLogin }) {
+function AppAppBar({ mode, toggleColorMode }) {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
-
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     const offset = 128;
+    navigate(`/#${sectionId}`);
     if (sectionElement) {
       const targetScroll = sectionElement.offsetTop - offset;
       sectionElement.scrollIntoView({ behavior: "smooth" });
@@ -33,7 +33,6 @@ function AppAppBar({ mode, toggleColorMode, setLogin }) {
       setOpen(false);
     }
   };
-
   return (
     <div>
       <AppBar
@@ -159,7 +158,7 @@ function AppAppBar({ mode, toggleColorMode, setLogin }) {
                 component="a"
                 target="_blank"
               >
-                <Link to={"/signup"}>Contact Me</Link>
+                <Link to={"/signup"}>Contact Us</Link>
               </Button>
             </Box>
             <Box sx={{ display: { sm: "", md: "none" } }}>

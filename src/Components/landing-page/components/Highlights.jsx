@@ -11,6 +11,7 @@ import QueryStatsRoundedIcon from "@mui/icons-material/QueryStatsRounded";
 import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -18,36 +19,63 @@ const items = [
     title: "Adaptable performance",
     description:
       "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.",
+    url: "",
   },
   {
     icon: <ConstructionRoundedIcon />,
     title: "Built to last",
     description:
       "Experience unmatched durability that goes above and beyond with lasting investment.",
+    url: "",
   },
   {
     icon: <ThumbUpAltRoundedIcon />,
     title: "Great user experience",
     description:
       "Integrate our product into your routine with an intuitive and easy-to-use interface.",
+    url: "",
   },
   {
     icon: <AutoFixHighRoundedIcon />,
     title: "Innovative functionality",
     description:
       "Stay ahead with features that set new standards, addressing your evolving needs better than the rest.",
+    url: "",
   },
   {
     icon: <SupportAgentRoundedIcon />,
     title: "Reliable support",
     description:
       "Count on our responsive customer support, offering assistance that goes beyond the purchase.",
+    url: "",
   },
   {
     icon: <QueryStatsRoundedIcon />,
     title: "Precision in every detail",
     description:
       "Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.",
+    url: "",
+  },
+  {
+    icon: <SettingsSuggestRoundedIcon />,
+    title: "Adaptable performance",
+    description:
+      "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.",
+    url: "",
+  },
+  {
+    icon: <ConstructionRoundedIcon />,
+    title: "Built to last",
+    description:
+      "Experience unmatched durability that goes above and beyond with lasting investment.",
+    url: "",
+  },
+  {
+    icon: <ThumbUpAltRoundedIcon />,
+    title: "Great user experience",
+    description:
+      "Integrate our product into your routine with an intuitive and easy-to-use interface.",
+    url: "",
   },
 ];
 
@@ -89,32 +117,34 @@ export default function Highlights() {
         <Grid container spacing={2.5}>
           {items.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <Stack
-                direction="column"
-                color="inherit"
-                component={Card}
-                spacing={1}
-                useFlexGap
-                sx={{
-                  p: 3,
-                  height: "100%",
-                  border: "1px solid",
-                  borderColor: "grey.800",
-                  background: "transparent",
-                  backgroundColor: "grey.900",
-                }}
-                className=" hover:bg-gray-700"
-              >
-                <Box sx={{ opacity: "50%" }}>{item.icon}</Box>
-                <div>
-                  <Typography fontWeight="medium" gutterBottom>
-                    {item.title}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: "grey.400" }}>
-                    {item.description}
-                  </Typography>
-                </div>
-              </Stack>
+              <a href={`${item.title}`} target="_blank">
+                <Stack
+                  direction="column"
+                  color="inherit"
+                  component={Card}
+                  spacing={1}
+                  useFlexGap
+                  sx={{
+                    p: 3,
+                    height: "100%",
+                    border: "1px solid",
+                    borderColor: "grey.800",
+                    background: "transparent",
+                    backgroundColor: "grey.900",
+                  }}
+                  className=" hover:bg-gray-700"
+                >
+                  <Box sx={{ opacity: "50%" }}>{item.icon}</Box>
+                  <div>
+                    <Typography fontWeight="medium" gutterBottom>
+                      {item.title}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "grey.400" }}>
+                      {item.description}
+                    </Typography>
+                  </div>
+                </Stack>
+              </a>
             </Grid>
           ))}
         </Grid>

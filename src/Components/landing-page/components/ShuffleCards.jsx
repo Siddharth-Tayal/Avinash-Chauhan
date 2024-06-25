@@ -23,14 +23,14 @@ export default function Grid() {
           <motion.h1 className=" text-2xl text-neutral-200 pointer-events-none">
             Welcome to👋 ,
           </motion.h1>
-          <motion.h1 className=" text-4xl z-[999] whitespace-nowrap md:text-wrap lg:text-nowrap md:text-6xl font-bold text-white pointer-events-none bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent ... bg-clip-text">
-            Parindeyy Studioz
+          <motion.h1 className=" text-4xl text-center lg:text-left z-[999] whitespace-nowrap md:text-wrap lg:text-nowrap md:text-6xl font-bold  pointer-events-none md:leading-[70px] bg-gradient-to-r from-purple-600 via-white to-blue-400 text-transparent ... bg-clip-text">
+            Parindeyy Wings Of <br /> Imagination
           </motion.h1>
-          <motion.p className=" w-[90vw] lg:w-[35vw] text-slate-500 text-xl text-center lg:text-justify pointer-events-none">
+          <motion.p className=" w-[90vw] lg:w-[35vw] text-slate-500 text-md text-center lg:text-justify pointer-events-none">
             "Parindeyy Studioz brings your vision to life with exceptional event
             planning, mesmerizing cultural dance performances, and top-notch
-            production services. Let us create unforgettable moments for your
-            special occasions!"
+            film production services. Let us create unforgettable moments for
+            your special occasions!"
             {/* <ReactTyped
               className=" text-orange-500"
               strings={["products", "categories", "brands"]}
@@ -48,7 +48,7 @@ export default function Grid() {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             className=" text-neutral-100 rounded-full text-xl md:text-3xl bg-indigo-700 px-10 py-3 border border-indigo-900 pointer-events-auto"
           >
-            Contact Us
+            Explore Now{" "}
           </motion.button>{" "}
         </div>
         <ShuffleCard />

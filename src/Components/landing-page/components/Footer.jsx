@@ -11,6 +11,13 @@ import Typography from "@mui/material/Typography";
 import FacebookIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/X";
+import {
+  Facebook,
+  LinkedIn,
+  Twitter,
+  Instagram,
+  YouTube,
+} from "@mui/icons-material";
 
 const logoStyle = {
   width: "140px",
@@ -28,6 +35,25 @@ function Copyright() {
 }
 
 export default function Footer() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "7505ec6a-57f1-40f0-9d4e-374ec24dafd3");
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    console.log(json);
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
   return (
     <Container
       sx={{
@@ -71,28 +97,33 @@ export default function Footer() {
             <Typography variant="body2" color="text.secondary" mb={2}>
               Subscribe to our newsletter for weekly updates and promotions.
             </Typography>
-            <Stack direction="row" spacing={1} useFlexGap>
-              <TextField
-                id="outlined-basic"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                fullWidth
-                aria-label="Enter your email address"
-                placeholder="Your email address"
-                inputProps={{
-                  autoComplete: "off",
-                  "aria-label": "Enter your email address",
-                }}
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                sx={{ flexShrink: 0 }}
-              >
-                Subscribe
-              </Button>
-            </Stack>
+            <form onSubmit={handleSubmit}>
+              <Stack direction="row" spacing={1} useFlexGap>
+                <TextField
+                  id="outlined-basic"
+                  hiddenLabel
+                  size="small"
+                  variant="outlined"
+                  fullWidth
+                  aria-label="Enter your email address"
+                  placeholder="Your email address"
+                  inputProps={{
+                    autoComplete: "off",
+                    "aria-label": "Enter your email address",
+                  }}
+                  name="email"
+                />
+                {/* <input type="email" placeholder="Enter your email address" /> */}
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  sx={{ flexShrink: 0 }}
+                >
+                  Subscribe
+                </Button>
+              </Stack>
+            </form>
           </Box>
         </Box>
         <Box
@@ -199,7 +230,15 @@ export default function Footer() {
             aria-label="GitHub"
             sx={{ alignSelf: "center" }}
           >
-            <FacebookIcon />
+            <YouTube />
+          </IconButton>{" "}
+          <IconButton
+            color="inherit"
+            href="https://github.com/mui"
+            aria-label="GitHub"
+            sx={{ alignSelf: "center" }}
+          >
+            <Facebook />
           </IconButton>
           <IconButton
             color="inherit"
@@ -207,7 +246,7 @@ export default function Footer() {
             aria-label="X"
             sx={{ alignSelf: "center" }}
           >
-            <TwitterIcon />
+            <Twitter />
           </IconButton>
           <IconButton
             color="inherit"
@@ -215,7 +254,7 @@ export default function Footer() {
             aria-label="LinkedIn"
             sx={{ alignSelf: "center" }}
           >
-            <LinkedInIcon />
+            <Instagram />
           </IconButton>
         </Stack>
       </Box>

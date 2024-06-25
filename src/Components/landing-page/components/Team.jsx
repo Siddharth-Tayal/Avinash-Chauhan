@@ -109,7 +109,7 @@ export default function Team() {
             </Box>
             <div>
               <Typography fontWeight="bold" gutterBottom>
-                Avinash Chauhan
+                Vishwas Chauhan
               </Typography>{" "}
               <Typography fontWeight="medium" gutterBottom>
                 Founder and Director
@@ -148,7 +148,7 @@ export default function Team() {
             </Box>
             <div>
               <Typography fontWeight="bold" gutterBottom>
-                Avinash Chauhan
+                Vishwas Chauhan
               </Typography>{" "}
               <Typography fontWeight="medium" gutterBottom>
                 Founder and Director

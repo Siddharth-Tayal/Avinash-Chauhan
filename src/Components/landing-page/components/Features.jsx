@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link as LinkRoute } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -9,35 +10,26 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
-import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 import { DesignServices, Language, Psychology } from "@mui/icons-material";
 
 const items = [
-  // {
-  //   icon: <ViewQuiltRoundedIcon />,
-  //   title: "Dashboard",
-  //   description:
-  //     "This item could provide a snapshot of the most important metrics or data points related to the product.",
-  //   imageLight:
-  //     'url("https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRhc2hib2FyZHxlbnwwfHwwfHx8MA%3D%3D")',
-  //   imageDark:
-  //     'url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFzaGJvYXJkfGVufDB8fDB8fHww")',
-  // },
   {
     icon: <EdgesensorHighRoundedIcon />,
-    title: "Mobile Responsive",
+    title: "Government, Corporate and Private Events",
+
+    url: "feature/gcp",
     description:
       "Mastering responsive design to ensure flawless user experiences across all devices, doubling the impact of your content.",
     imageLight:
-      'url("https://images.unsplash.com/photo-1598061403733-a0d8eb6bd569?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vYmlsZSUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D")',
+      'url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D")',
     imageDark:
-      'url("https://images.unsplash.com/photo-1605918321755-0b5ffd8a796a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fG1vYmlsZSUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D")',
+      'url("https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D")',
   },
   {
     icon: <Psychology />,
-    title: "Advanced capabilities",
+    title: "Film Production",
+    url: "feature/film-production",
     description:
       "Expertly delivering robust web solutions with advanced features like real-time processing, seamless integrations, and secure authentication.",
     imageLight:
@@ -47,7 +39,8 @@ const items = [
   },
   {
     icon: <DesignServices />,
-    title: "Exquisite interfaces",
+    title: "School and College Functions",
+    url: "feature/schools-colleges-functions",
     description:
       "Designing top-tier web solutions with intuitive, user-friendly interfaces and visually stunning layouts.",
     imageLight:
@@ -79,9 +72,9 @@ export default function Features() {
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Here you can provide a brief overview of the key features of the
-              product. For example, you could list the number of features, the
-              types of features, add-ons, or the benefits of the features.
+              Here is overview of the key Services provided by the Parindeyy
+              Studios. Our main services includes Event planning and Organising
+              , Film Production and School/College Function organising.
             </Typography>
           </div>
           <Grid
@@ -155,6 +148,7 @@ export default function Features() {
                 color="primary"
                 variant="body2"
                 fontWeight="bold"
+                // href={`${selectedFeature.url}`}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -162,11 +156,13 @@ export default function Features() {
                   "&:hover > svg": { transform: "translateX(2px)" },
                 }}
               >
-                <span>Learn more</span>
-                <ChevronRightRoundedIcon
-                  fontSize="small"
-                  sx={{ mt: "1px", ml: "2px" }}
-                />
+                <LinkRoute to={`${selectedFeature.url}`}>
+                  <span>Learn more</span>
+                  <ChevronRightRoundedIcon
+                    fontSize="small"
+                    sx={{ mt: "1px", ml: "2px" }}
+                  />
+                </LinkRoute>
               </Link>
             </Box>
           </Box>
@@ -178,7 +174,7 @@ export default function Features() {
             useFlexGap
             sx={{ width: "100%", display: { xs: "none", sm: "flex" } }}
           >
-            {items.map(({ icon, title, description }, index) => (
+            {items.map(({ icon, title, description, url }, index) => (
               <Card
                 key={index}
                 variant="outlined"
@@ -255,18 +251,13 @@ export default function Features() {
                         "&:hover > svg": { transform: "translateX(2px)" },
                       }}
                     >
-                      <a
-                        href="/#testimonials"
-                        onClick={(event) => {
-                          event.stopPropagation();
-                        }}
-                      >
+                      <LinkRoute to={`${url}`}>
                         <span>Learn more</span>
                         <ChevronRightRoundedIcon
                           fontSize="small"
                           sx={{ mt: "1px", ml: "2px" }}
                         />
-                      </a>
+                      </LinkRoute>
                     </Link>
                   </Box>
                 </Box>
