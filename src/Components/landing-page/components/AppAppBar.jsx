@@ -141,16 +141,6 @@ function AppAppBar({ mode, toggleColorMode }) {
               }}
             >
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-              {/* <Button
-                color="primary"
-                variant="text"
-                size="small"
-                component="a"
-                onClick={() => setLogin(true)}
-                target="_blank"
-              >
-                Sign in
-              </Button> */}
               <Button
                 color="primary"
                 variant="contained"
@@ -220,18 +210,6 @@ function AppAppBar({ mode, toggleColorMode }) {
                     >
                       Contact Me
                     </Button>
-                  </MenuItem>
-                  <MenuItem>
-                    {/* <Button
-                      color="primary"
-                      variant="outlined"
-                      component="a"
-                      href="/material-ui/getting-started/templates/sign-in/"
-                      target="_blank"
-                      sx={{ width: "100%" }}
-                    >
-                      Sign in
-                    </Button> */}
                   </MenuItem>
                 </Box>
               </Drawer>

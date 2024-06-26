@@ -11,8 +11,6 @@ import QueryStatsRoundedIcon from "@mui/icons-material/QueryStatsRounded";
 import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
-import { Link } from "react-router-dom";
-
 const items = [
   {
     icon: <SettingsSuggestRoundedIcon />,
@@ -78,7 +76,6 @@ const items = [
     url: "",
   },
 ];
-
 export default function Highlights() {
   return (
     <Box
