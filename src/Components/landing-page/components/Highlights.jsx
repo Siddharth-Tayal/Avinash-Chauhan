@@ -14,68 +14,69 @@ import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
 const items = [
   {
     icon: <SettingsSuggestRoundedIcon />,
-    title: "Adaptable performance",
+    title: "Meticulous Attention to Detail",
     description:
-      "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.",
+      "PWOI ensures every aspect of your event is handled with the utmost care, guaranteeing a seamless experience.",
     url: "",
   },
   {
     icon: <ConstructionRoundedIcon />,
-    title: "Built to last",
+    title: "Comprehensive Services",
     description:
-      "Experience unmatched durability that goes above and beyond with lasting investment.",
+      "We offer a full range of services including catering, tenting, lighting, and decor to cover all your event needs.",
     url: "",
   },
   {
     icon: <ThumbUpAltRoundedIcon />,
-    title: "Great user experience",
+    title: "Creative Solutions",
     description:
-      "Integrate our product into your routine with an intuitive and easy-to-use interface.",
+      "Our innovative and customized solutions bring your vision to life, creating unique and memorable events.",
     url: "",
   },
   {
     icon: <AutoFixHighRoundedIcon />,
-    title: "Innovative functionality",
+    title: "Expertise in Diverse Events",
     description:
-      "Stay ahead with features that set new standards, addressing your evolving needs better than the rest.",
+      "PWOI specializes in government, corporate, private events, and educational functions, providing tailored services for each.",
     url: "",
   },
   {
     icon: <SupportAgentRoundedIcon />,
-    title: "Reliable support",
+    title: "Commitment to Excellence",
     description:
-      "Count on our responsive customer support, offering assistance that goes beyond the purchase.",
+      "Our dedication to quality and excellence is evident in every detail, ensuring flawless execution of your event.",
     url: "",
   },
   {
     icon: <QueryStatsRoundedIcon />,
-    title: "Precision in every detail",
+    title: "State-of-the-Art Equipment",
     description:
-      "Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.",
+      "We use cutting-edge lighting and sound solutions to enhance the overall experience and create the perfect ambiance.",
     url: "",
   },
   {
     icon: <SettingsSuggestRoundedIcon />,
-    title: "Adaptable performance",
+    title: "Innovative Event Planning",
     description:
-      "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.",
+      "PWOI’s creative approach transforms any venue into a breathtaking setting, making your event extraordinary.",
     url: "",
   },
   {
     icon: <ConstructionRoundedIcon />,
-    title: "Built to last",
+    title: "Lasting Impressions",
     description:
-      "Experience unmatched durability that goes above and beyond with lasting investment.",
+      "Our thorough planning and execution leave a lasting impression on guests, making your event unforgettable.",
     url: "",
   },
   {
     icon: <ThumbUpAltRoundedIcon />,
-    title: "Great user experience",
+    title: "Experienced Team",
     description:
-      "Integrate our product into your routine with an intuitive and easy-to-use interface.",
+      "Our team of professionals works closely with clients to understand their vision and deliver exceptional results.",
     url: "",
   },
 ];
+
 export default function Highlights() {
   return (
     <Box
@@ -106,9 +107,10 @@ export default function Highlights() {
             Highlights
           </Typography>
           <Typography variant="body1" sx={{ color: "grey.400" }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer
-            support and precision in every detail.
+            Parindeyy Wings of Imagination (PWOI) stands out for its meticulous
+            attention to detail, creative solutions, and unwavering commitment
+            to excellence, ensuring every event is a seamless and extraordinary
+            experience.
           </Typography>
         </Box>
         <Grid container spacing={2.5}>

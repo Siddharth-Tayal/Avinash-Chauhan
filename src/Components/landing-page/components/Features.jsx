@@ -20,33 +20,33 @@ const items = [
 
     url: "feature/gcp",
     description:
-      "Mastering responsive design to ensure flawless user experiences across all devices, doubling the impact of your content.",
+      "Parindeyy Wings of Imagination (PWOI) is a leading provider of comprehensive event management services, catering to government, corporate, and private events. ",
     imageLight:
-      'url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D")',
+      'url("https://images.unsplash.com/photo-1602501155404-05a477134703?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cG9saXRpY2FsJTIwY2FtcGFpZ258ZW58MHx8MHx8fDA%3D")',
     imageDark:
-      'url("https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D")',
+      'url("https://plus.unsplash.com/premium_photo-1661353245572-5e41f6208de8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXVkaW8lMjB2aXN1YWxzfGVufDB8fDB8fHww")',
   },
   {
     icon: <Psychology />,
     title: "Film Production",
     url: "feature/film-production",
     description:
-      "Expertly delivering robust web solutions with advanced features like real-time processing, seamless integrations, and secure authentication.",
+      "Parindeyy Wings of Imagination (PWOI) excels in film and song production, offering comprehensive services from conceptualization to distribution. ",
     imageLight:
-      'url("https://plus.unsplash.com/premium_photo-1661715955019-89f39802cd4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2VydmVyJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D")',
+      'url("https://images.unsplash.com/photo-1703117104853-31800b2e2a70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWl4aW5nJTIwYW5kJTIwbWFzdGVyaW5nfGVufDB8fDB8fHww")',
     imageDark:
-      'url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNlcnZlcnxlbnwwfHwwfHx8MA%3D%3D")',
+      'url("https://plus.unsplash.com/premium_photo-1710961232986-36cead00da3c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZpbG0lMjBwcm9kdWN0aW9uJTIwaG91c2V8ZW58MHx8MHx8fDA%3D")',
   },
   {
     icon: <DesignServices />,
     title: "School and College Functions",
     url: "feature/schools-colleges-functions",
     description:
-      "Designing top-tier web solutions with intuitive, user-friendly interfaces and visually stunning layouts.",
+      "Parindeyy Wings of Imagination (PWOI) excels in managing and organizing school and college functions, offering a full suite of services to ensure a seamless and memorable experience.",
     imageLight:
-      'url("https://images.unsplash.com/photo-1558655146-d09347e92766?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzaWdufGVufDB8fDB8fHww")',
+      'url("https://images.unsplash.com/photo-1527269534026-c86f4009eace?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2Nob29sJTIwcGFydGllc3xlbnwwfHwwfHx8MA%3D%3D")',
     imageDark:
-      'url("https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGRlc2lnbiUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D")',
+      'url("https://media.istockphoto.com/id/1849651115/photo/open-red-theatre-stage-curtains.webp?b=1&s=170667a&w=0&k=20&c=E05R-kIEQx1m6OL7zsqfU7WhSKtfazOImWMJjppaN24=")',
   },
 ];
 
@@ -141,6 +141,7 @@ export default function Features() {
                 color="text.secondary"
                 variant="body2"
                 sx={{ my: 0.5 }}
+                className=" line-clamp-4"
               >
                 {selectedFeature.description}
               </Typography>
@@ -252,7 +253,7 @@ export default function Features() {
                       }}
                     >
                       <LinkRoute to={`${url}`}>
-                        <span>Learn more</span>
+                        <span>Read more</span>
                         <ChevronRightRoundedIcon
                           fontSize="small"
                           sx={{ mt: "1px", ml: "2px" }}
